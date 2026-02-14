@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BauGoma — Goma Industriale</title>
+  <meta name="description" content="Heavy-duty wheels and rims for excavators, trucks, tractors, and industrial machinery. Built for load, traction, and durability." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+
+<body>
+  <!-- Progress bar -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__bar" id="progressBar"></div>
+  </div>
+
+  <!-- Top announcement -->
+  <div class="topbar" role="status">
+    <p><span class="dot"></span> Goma profesionale • Goma me Porosi • </p>
+  </div>
+  
+  <!-- Header -->
+  <header id="top" class="header"> 
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#top">
+        <img src="assets/logo.jpeg" alt="GreenTorque Wheels logo" class="brand__logo" />
+        <span class="brand__text">
+          <strong>BauGoma</strong><span>Goma</span>
+        </span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+        <span class="sr-only">Toggle menu</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <a href="#products" class="nav__link">Produktet</a>
+        <a href="#industries" class="nav__link">Industria</a>
+        <a href="#quality" class="nav__link">Kualiteti</a>
+        <a href="#testimonials" class="nav__link">Komente</a>
+        <a href="#contact" class="nav__link nav__link--cta">Kërkesa</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero" aria-label="Hero section">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+      <div class="container hero__grid">
+        <div class="hero__copy reveal">
+          <p class="pill">
+            <span class="pill__spark" aria-hidden="true"></span>
+            Goma profesionale për makineri të rënda.
+          </p>
+
+          <h1>
+            Goma për
+            <span class="accent">kamionë</span>, <span class="accent">autobus</span>, dhe <span class="accent">makineri të rënda</span>.
+          </h1>
+
+          <p class="lead">
+            Standard i lartë cilësie me kosto të përballueshme.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#products">Shiko Produktet</a>
+            <button class="btn btn--ghost" id="openQuote">Kërkesa</button>
+          </div>
+
+          <div class="stats">
+            <div class="stat reveal">
+              <div class="stat__num" data-count="1000">0</div>
+              <div class="stat__label">Sasia e Gomave</div>
+            </div>
+            <div class="stat reveal">
+              <div class="stat__num" data-count="24">0</div>
+              <div class="stat__label">Dërgesë brenda orësh</div>
+            </div>
+            <div class="stat reveal">
+              <div class="stat__num" data-count="100">0</div>
+              <div class="stat__label">% Saktësi e përshtatjes</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hero__media reveal">
+          <div class="slider" aria-label="Featured products slider">
+            <div class="slider__track" id="sliderTrack">
+              <article class="slide">
+                <img src="assets/bus-logo2.jpg" alt="Llojet e mjeteve" loading="eager" />
+                <div class="slide__cap">
+                  <strong>Goma profiesionale</strong>
+                  <span>për autobus</span>
+                </div>
+              </article>
+              <article class="slide">
+                <img src="assets/p1.jpeg" alt="Llojet e mjeteve" loading="lazy" />
+                <div class="slide__cap">
+                  <strong>Goma profesionale</strong>
+                  <span>për kamionë</span>
+                </div>
+              </article>
+              <article class="slide">
+                <img src="assets/p3.jpeg" alt="Llojet e mjeteve" loading="lazy" />
+                <div class="slide__cap">
+                  <strong>Goma profesionale</strong>                
+                  <span>për eskavatorë</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="slider__controls">
+              <button class="iconbtn" id="prevSlide" aria-label="Previous slide">‹</button>
+              <button class="iconbtn" id="nextSlide" aria-label="Next slide">›</button>
+            </div>
+
+            <div class="slider__dots" id="sliderDots" aria-label="Slide indicators"></div>
+          </div>
+        </div>
+      </div>
+
+      <a class="scrollhint" href="#products" aria-label="Scroll to products">
+        <span class="scrollhint__mouse" aria-hidden="true"></span>
+        <span class="scrollhint__text">Poshtë</span>
+      </a>
+    </section>
+
+    <!-- Products -->
+    <section class="section" id="products" aria-label="Products">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="reveal">Produktet</h2>
+          <p class="muted reveal">
+            Filtro sipas aplikimit. Kliko një opsion për një pamje të shpejtë të detajeve te produktit
+          </p>
+        </div>
+
+        <div class="filters reveal" role="tablist" aria-label="Product filters">
+          <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">Të gjitha</button>
+          <button class="chip" data-filter="kamion" role="tab" aria-selected="false">Kamionë</button>
+          <button class="chip" data-filter="autobus" role="tab" aria-selected="false">Autobus</button>
+          <button class="chip" data-filter="eskavatore" role="tab" aria-selected="false">Eskavatorë</button>
+          <button class="chip" data-filter="rimorkio" role="tab" aria-selected="false">Rimorkio</button>
+          <button class="chip" data-filter="luge" role="tab" aria-selected="false">Lugë Ngarkuese</button>
+          <button class="chip" data-filter="skip" role="tab" aria-selected="false">Skip</button>
+          <button class="chip" data-filter="piruner" role="tab" aria-selected="false">Piruner</button>
+          <button class="chip" data-filter="kombi" role="tab" aria-selected="false">Kombi</button>  
+        </div>
+
+        <div class="grid" id="productGrid">
+          <button class="card reveal" data-tags="eskavatore" data-title="Extreme Load 24" data-spec="22in • Reinforced bead • Anti-corrosion coat" data-img="assets/esk1.jpeg">
+            <img src="assets/esk1.jpeg" alt="Extreme Load 24" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Eskavatorë</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="luge" data-title="RoadForce 22.5" data-spec="22.5in • Highway-rated • Heat-treated alloy" data-img="assets/luge1.jpeg">
+            <img src="assets/luge1.jpeg" alt="RoadForce 22.5" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Lugë Ngarkuese</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="kamion" data-title="FieldGrip 20" data-spec="20in • Mud-shedding design • Impact resistance" data-img="assets/p11.jpeg">
+            <img src="assets/p11.jpeg" alt="FieldGrip 20" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Kamionë</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="rimorkio" data-title="ForgeCore 18" data-spec="18in • High torque hubs • Industrial finish" data-img="assets/p12.jpg">
+            <img src="assets/p12.jpg" alt="ForgeCore 18" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Rimorkio</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="eskavatore" data-title="QuarryMax 25" data-spec="25in • Stone-site ready • Beadlock option" data-img="assets/esk2.jpeg">
+            <img src="assets/esk2.jpeg" alt="QuarryMax 25" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Eskavatorë</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="luge" data-title="CargoShield 20" data-spec="20in • Fleet spec • Salt-spray protection" data-img="assets/luge2.jpeg">
+            <img src="assets/luge2.jpeg" alt="CargoShield 20" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Lugë Ngarkuese</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="kamion" data-title="AgriTorque 16" data-spec="16in • Field-proven • Reinforced spokes" data-img="assets/luge12.jpg">
+            <img src="assets/luge12.jpg" alt="AgriTorque 16" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Kamionë</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="rimorkio" data-title="SitePro 26" data-spec="26in • Heavy-duty • Precision machined" data-img="assets/p16.webp">
+            <img src="assets/p16.webp" alt="SitePro 26" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Rimorkio</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="kamion autobus" data-title="HaulKing 19.5" data-spec="19.5in • Delivery fleets • Balanced profile" data-img="assets/p17.jpeg">
+            <img src="assets/p17.jpeg" alt="HaulKing 19.5" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Kamionë, Autobus</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="luge" data-title="HaulKing 19.5" data-spec="19.5in • Delivery fleets • Balanced profile" data-img="assets/luge3.jpeg">
+            <img src="assets/luge3.jpeg" alt="HaulKing 19.5" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Lugë Ngarkuese</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="luge" data-title="TerraSteel 17" data-spec="17in • Multi-purpose • Powder coat finish" data-img="assets/luge4.jpeg">
+            <img src="assets/luge4.jpeg" alt="TerraSteel 17" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Lugë Ngarkuese</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="eskavatore" data-title="QuarryMax 25" data-spec="25in • Stone-site ready • Beadlock option" data-img="assets/esk3.jpeg">
+            <img src="assets/esk3.jpeg" alt="QuarryMax 25" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Eskavatorë</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="piruner" data-title="QuarryMax 25" data-spec="25in • Stone-site ready • Beadlock option" data-img="assets/pir1.jpeg">
+            <img src="assets/pir1.jpeg" alt="QuarryMax 25" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Piruner</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="piruner" data-title="QuarryMax 25" data-spec="25in • Stone-site ready • Beadlock option" data-img="assets/pir2.jpeg">
+            <img src="assets/pir2.jpeg" alt="QuarryMax 25" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Piruner</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="luge" data-title="QuarryMax 25" data-spec="25in • Stone-site ready • Beadlock option" data-img="assets/goma1.jpg">
+            <img src="assets/goma1.jpg" alt="QuarryMax 25" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Lugë Ngarkuese</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="luge" data-title="QuarryMax 25" data-spec="25in • Stone-site ready • Beadlock option" data-img="assets/goma2.jpg">
+            <img src="assets/goma2.jpg" alt="QuarryMax 25" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Lugë Ngarkuese</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="kamion autobus kombi" data-title="QuarryMax 25" data-spec="25in • Stone-site ready • Beadlock option" data-img="assets/goma20.jpg">
+            <img src="assets/goma20.jpg" alt="QuarryMax 25" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Kamionë, Autobus, Kombi</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="kamion autobus kombi" data-title="QuarryMax 25" data-spec="25in • Stone-site ready • Beadlock option" data-img="assets/goma21.jpg">
+            <img src="assets/goma21.jpg" alt="QuarryMax 25" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Kamionë, Autobus, Kombi</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="kamion autobus kombi" data-title="QuarryMax 25" data-spec="25in • Stone-site ready • Beadlock option" data-img="assets/goma22.jpg">
+            <img src="assets/goma22.jpg" alt="QuarryMax 25" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Kamionë, Autobus, Kombi</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="kamion autobus" data-title="QuarryMax 25" data-spec="25in • Stone-site ready • Beadlock option" data-img="assets/goma33.jpg">
+            <img src="assets/goma33.jpg" alt="QuarryMax 25" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Kamionë, Autobus</span>
+            </div>
+          </button>
+          <button class="card reveal" data-tags="kombi" data-title="CityVan 17" data-spec="17in • Urban use • Low noise" data-img="assets/goma55.jpg">
+            <img src="assets/goma55.jpg" alt="CityVan 17" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Kombi</span>
+            </div>
+          </button>
+
+          <button class="card reveal" data-tags="rimorkio" data-title="TrailerSafe 16" data-spec="16in • Stable load • Durable sidewall" data-img="assets/goma51.jpg">
+            <img src="assets/goma51.jpg" alt="TrailerSafe 16" loading="lazy" />
+            <div class="card__body">
+              <strong>Goma profesionale</strong>
+              <span class="muted">Rimorkio</span>
+            </div>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries -->
+    <section class="section section--alt" id="industries" aria-label="Industries served">
+      <div class="container">
+        <div class="split">
+          <div class="reveal">
+            <h2>Industria</h2>
+            <p class="muted">
+              BauGoma ofron goma profesionale për makineri të rënda. 
+              Ofrojme porosi me shumicë dhe pakicë, si dhe porosi të specifikuara.
+            </p>
+
+            <ul class="ticks">
+              <li>Rezistencë ndaj konsumit</li>
+              <li>Stabilitet dhe komoditet</li>
+              <li>Rezistencë ndaj kimikateve dhe motit</li>
+              <li>Kapacitet i lartë mbajtës</li>
+            </ul>
+
+            <div class="note reveal">
+              <strong>Të duhen goma me kualitet?</strong>
+              <span class="muted">Je i mirëseardhur në BauGoma!</span>
+            </div>
+          </div>
+
+          <div class="panel reveal" aria-label="Service highlights">
+            <div class="panel__item">
+              <strong>Llojllojshmëria</strong>
+              <p class="muted">Të gjitha gomat për të gjitha modelet e mjeteve te renda.</p>
+            </div>
+            <div class="panel__item">
+              <strong>Programet</strong>
+              <p class="muted">Të gjitha modelet janë të disponueshme në përputhje me programet përkatëse.</p>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quality -->
+    <section class="section" id="quality" aria-label="Quality and process">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="reveal">Procesi i Cilësisë</h2>
+          <p class="muted reveal">Një përmbledhje e mënyrës si sigurojmë cilësi të lartë dhe besueshmëri në produktet që ofrojmë.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="step reveal">
+            <div class="step__n">1</div>
+            <div class="step__c">
+              <strong>Përzgjedhja dhe Përshtatja</strong>
+              <p class="muted">Analizojmë kërkesat e aplikimit, kapacitetin e ngarkesës dhe dimensionet për të siguruar përputhje të saktë me mjetin tuaj.</p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step__n">2</div>
+            <div class="step__c">
+              <strong>Furnizimi</strong>
+              <p class="muted">Punojmë vetëm me prodhues dhe marka të certifikuara që përmbushin standarde ndërkombëtare të cilësisë.</p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step__n">3</div>
+            <div class="step__c">
+              <strong>Kontrolli i Cilësisë</strong>
+              <p class="muted">Kontrollim i cilësisë në çdo fazë të prodhimit për të siguruar përputhshmëri me standardet e aplikimit.</p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step__n">4</div>
+            <div class="step__c">
+              <strong>Mbrojtja dhe Magazinimi</strong>
+              <p class="muted">Gomat ruhen në kushte të kontrolluara për t’i mbrojtur nga dëmtimet, lagështia dhe faktorët e jashtëm.</p>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section--alt" id="testimonials" aria-label="Customer reviews">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="reveal">Komente</h2>
+          <p class="muted reveal">Vlerësimi juaj pas çdo blerjeje na ndihmon në përmirësimin e vazhdueshëm të cilësisë..</p>
+        </div>
+
+        <div class="quotes">
+          <figure class="quote reveal">
+            <blockquote>“Përshtatja e gomave ishte shumë e saktë. Dorëzimi i shpejtë dhe performancë shumë e mirë.”</blockquote>
+            <figcaption class="muted">Klientë</figcaption>
+          </figure>
+
+          <figure class="quote reveal">
+            <blockquote>“Cilësi shumë e mirë dhe rezistencë në terrene të vështira. Edhe në kushte me lagështi nuk kemi pasur probleme.”</blockquote>
+            <figcaption class="muted">Klientë</figcaption>
+          </figure>
+
+          <figure class="quote reveal">
+            <blockquote>“Porosia u trajtua me profesionalizëm. Komunikim i qartë dhe dërgesa korrekte çdo herë.”</blockquote>
+            <figcaption class="muted">Klientë</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact" aria-label="Contact and quote form">
+      <div class="container">
+        <div class="contact">
+          <div class="contact__left reveal">
+            <h2>Ke kerkesë</h2>
+            <p class="muted">
+              Na tregoni makinerinë dhe kërkesat tuaja — na kontaktoni me email, telefon ose ejani të na vizitoni.
+            </p>
+
+            <div class="contact__cards">
+              <div class="mini">
+                <strong>Phone</strong>
+                <span class="muted"><br>+383 48 742 742<br> +383 49 601 616</span>
+              </div>
+              <div class="mini">
+                <strong>Email</strong>
+                <span class="muted"><br>baugoma@hotmail.com<br>baugoma1@gmail.com</span>
+              </div>
+              <div class="mini">
+                <strong>Lokacioni</strong>
+                <span class="muted">Autostrada Prishtine - Peje, Komoran, Kosovo, 13050</span>
+              </div>
+            </div>
+
+            <div class="badge">
+              <span class="badge__dot" aria-hidden="true"></span>
+              <span>Typical response: same business day</span>
+            </div>
+          </div>
+
+          <form class="form reveal" id="quoteForm">
+            <div class="form__row">
+              <label>
+                <span>Emri</span>
+                <input required name="name" autocomplete="name" placeholder="Emri juaj" />
+              </label>
+              <label>
+                <span>Kompania</span>
+                <input name="company" autocomplete="organization" placeholder="Kompania (opsionale)" />
+              </label>
+            </div>
+
+            <div class="form__row">
+              <label>
+                <span>Emaili</span>
+                <input required name="email" type="email" autocomplete="email" placeholder="ti@shembull.com" />
+              </label>
+              <label>
+                <span>Nr. telefonit</span>
+                <input name="numri" autocomplete="tel" placeholder="+383 ..." />
+              </label>
+            </div>
+
+            <div class="form__row">
+              <label>
+                <span>Makineria</span>
+                <select required name="application">
+                  <option value="" selected disabled>Select…</option>
+                  <option>kamionë</option>
+                  <option>autobus</option>
+                  <option>eskavatorë</option>
+                  <option>Rimorkio</option>
+                  <option>lugë ngarkuese</option>
+                  <option>skip</option>
+                  <option>piruner</option>
+                  <option>kombi</option>
+                  <option>Tjere</option>
+                </select>
+              </label>
+
+              <label>
+                <span>Sasia</span>
+                <input required name="qty" type="number" min="1" value="4" />
+              </label>
+            </div>
+
+            <label>
+              <span>Shenimet</span>
+              <textarea required name="notes" rows="5" placeholder="Me duhen goma per kete model..."></textarea>
+            </label>
+
+            <div class="form__actions">
+              <button class="btn btn--primary" type="submit">Dergoje kerkesen</button>
+              <button class="btn btn--ghost" type="button" id="fillDemo">Mbushi te dhenat</button>
+            </div>
+
+            <p class="tiny muted" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+<!-- Map -->
+<section class="section section--alt" id="location" aria-label="Our location">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="reveal">Lokacioni ynë</h2>
+      <p class="muted reveal">Na vizitoni -ne do t’ju ndihmojmë me modelet dhe opsionet.</p>
+    </div>
+
+    <div class="map reveal">
+    
+      <iframe 
+       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d932.8339137777608!2d20.901947599294903!3d42.58259291022368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135371005fcf00c1%3A0x26a42c3e4210a8d8!2sInternational%20Press!5e1!3m2!1sen!2snl!4v1771005638855!5m2!1sen!2snl"
+       style="border:0;"
+       allowfullscreen=""
+       loading="lazy"
+       referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+      <!-- Replace the src with your Google Maps embed link -->
+      
+
+      <div class="map__panel">
+        <strong>BauGoma</strong>
+        <p class="muted">
+          Autostrada Prishtine - Peje<br/>
+          Komoran, Kosove<br/>
+          Hene-Dielle: 08:00–17:00
+        </p>
+
+        <div class="map__actions">
+          <a class="btn btn--primary" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&query=Your+Business+Address">
+            Hapni në Google Maps
+          </a>
+          <a class="btn btn--ghost" href="#contact">Kerkesa</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__social">
+
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/share/1LKHz7qC7a/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" width="22">
+      <path fill="currentColor"
+        d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.1V12h2.1V9.8c0-2.1 1.2-3.3 3.1-3.3.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12"/>
+    </svg>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/baugoma?igsh=ZHF6emRqcGF6NHA5&utm_source=qr" target="_blank" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" width="22">
+      <path fill="currentColor"
+        d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7m0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3m11.3 1.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10m0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6"/>
+    </svg>
+  </a>
+
+</div>
+
+      <div>
+        <div class="footer__brand">
+          <a href="#top" class="footer__home" aria-label="Kthehu në fillim">
+            <img src="assets/logo.jpeg" alt="BauGoma logo" class="footer__logo" />
+          </a>
+          <div>
+            <strong>BauGoma</strong>
+            <div class="muted tiny">Goma per makineri te renda</div>
+          </div>
+        </div>
+        <p class="muted tiny">© <span id="year"></span> BauGoma. All rights reserved.</p>
+
+      </div>
+
+      <div class="footer__links">
+        <a href="#products">Produktet</a>
+        <a href="#industries">Industria</a>
+        <a href="#quality">Kualiteti</a>
+        <a href="#testimonials">Komente</a>
+        <a href="#contact">Kërkesa</a>
+        <a href="#top" class="to-top">Kthehu në fillim ↑</a>
+
+        <div class="footer__socials" aria-label="Social links">
+          <a class="social" href="https://www.instagram.com/baugoma?igsh=ZHF6emRqcGF6NHA5&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm9 2h-9A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4z"/>
+              <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+              <path d="M17.5 6.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+          </a>
+          <a class="social" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M13.5 22v-7h2.4l.4-3H13.5V10.1c0-.9.2-1.5 1.5-1.5h1.6V6c-.3 0-1.4-.1-2.7-.1-2.7 0-4.5 1.6-4.5 4.6V12H7v3h2.3v7h4.2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Product modal -->
+  <dialog class="modal" id="productModal" aria-label="Product details">
+    <div class="modal__head">
+      <strong id="modalTitle">Produkti </strong>
+      <button class="iconbtn" id="closeProduct" aria-label="Close">✕</button>
+    </div>
+    <div class="modal__body">
+      <img id="modalImg" alt="" />
+      <p class="muted" id="modalSpec"></p>
+      <div class="modal__actions">
+        <button class="btn btn--primary" id="modalQuote">Kerkese</button>
+        <button class="btn btn--ghost" id="modalClose2">Mbyll</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Quote modal -->
+  <dialog class="modal" id="quoteModal" aria-label="Quote quick modal">
+    <div class="modal__head">
+      <strong>Kerkese</strong>
+      <button class="iconbtn" id="closeQuote" aria-label="Close">✕</button>
+    </div>
+    <div class="modal__body">
+      <p class="muted">Kjo e hap formen dhe i mbushe te dhenat</p>
+      <div class="modal__actions">
+        <button class="btn btn--primary" id="goToForm">Shko te forma</button>
+        <button class="btn btn--ghost" id="closeQuote2">Mbyll</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+  emailjs.init("HYMuUpwf0yOag9eQ6");
+})();
+</script>
+
+
+
+  <script src="app.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("HYMuUpwf0yOag9eQ6");
+})();
+</script>
+
+</body>
+</html>
