@@ -657,3 +657,52 @@ h1{
   height:32px;
 }
 
+
+/* Hamburger button fix */
+.nav__toggle{
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* Burger icon */
+.burger,
+.burger::before,
+.burger::after{
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  display: block;
+  position: relative;
+  border-radius: 2px;
+}
+
+.burger::before,
+.burger::after{
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.burger::before{
+  top: -6px;
+}
+
+.burger::after{
+  top: 6px;
+}
+
+
+/* Desktop: mos e shfaq hamburger-in */
+@media (min-width: 900px){
+  .nav__toggle{
+    display: none !important;
+  }
+}
